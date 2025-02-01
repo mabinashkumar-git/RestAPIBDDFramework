@@ -1,0 +1,6 @@
+ * Follow link : "https://github.com/damianszczepanik/maven-cucumber-reporting" to download build plugin for generating report
+ * To get the report generated, run maven command "mvn test verify" from cmd after going to project path
+ * Before running feature "WebAPIValidation", start the server from cmd by command :
+    "java -jar -Dserver.port=9897 jobportal-0.0.1-SNAPSHOT.jar"
+ * Start the server from cmd after going to project path i.e. from "user.dir"
+ * All API Postman collections are found under "PostmanCollections" folder present under "user.dir"

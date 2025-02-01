@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "ef16dd99-4392-4543-8c5c-ce7eeb3271b8",
+		"name": "WebAPI Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16153360"
+	},
+	"item": [
+		{
+			"name": "General",
+			"item": [
+				{
+					"name": "Add_WebAPI",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"jobId\": 21,\r\n        \"jobTitle\": \"Software Engg\",\r\n        \"jobDescription\": \"To develop andriod application\",\r\n        \"experience\": [\r\n            \"Google\",\r\n            \"Apple\",\r\n            \"Mobile Iron\"\r\n        ],\r\n        \"project\": [\r\n            {\r\n                \"projectName\": \"Movie App\",\r\n                \"technology\": [\r\n                    \"Kotlin\",\r\n                    \"SQL Lite\",\r\n                    \"Gradle\"\r\n                ]\r\n            }\r\n        ]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9897/normal/webapi/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9897",
+							"path": [
+								"normal",
+								"webapi",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_WebAPI",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9897/normal/webapi/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9897",
+							"path": [
+								"normal",
+								"webapi",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get_WebAPI XML Response",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:9897/normal/webapi/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9897",
+							"path": [
+								"normal",
+								"webapi",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find_WebAPI",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9897/normal/webapi/find?id=1&jobTitle=Software Engg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9897",
+							"path": [
+								"normal",
+								"webapi",
+								"find"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								},
+								{
+									"key": "jobTitle",
+									"value": "Software Engg"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete_WebAPI",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"jobId\": 40,\r\n        \"jobTitle\": \"Software Engg\",\r\n        \"jobDescription\": \"To develop andriod application\",\r\n        \"experience\": [\r\n            \"Google\",\r\n            \"Apple\",\r\n            \"Mobile Iron\"\r\n        ],\r\n        \"project\": [\r\n            {\r\n                \"projectName\": \"Movie App\",\r\n                \"technology\": [\r\n                    \"Kotlin\",\r\n                    \"SQL Lite\",\r\n                    \"Gradle\"\r\n                ]\r\n            }\r\n        ]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9897/normal/webapi/remove/21",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9897",
+							"path": [
+								"normal",
+								"webapi",
+								"remove",
+								"21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update_WebAPI",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"jobId\": 2,\r\n        \"jobTitle\": \"Software Engg\",\r\n        \"jobDescription\": \"To develop andriod application\",\r\n        \"experience\": [\r\n            \"Google\",\r\n            \"Apple\",\r\n            \"Mobile Iron\"\r\n        ],\r\n        \"project\": [\r\n            {\r\n                \"projectName\": \"Movie App\",\r\n                \"technology\": [\r\n                    \"Kotlin\",\r\n                    \"SQL Lite\",\r\n                    \"Jenkins\",\r\n                    \"Gradle\"\r\n                ]\r\n            }\r\n        ]\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9897/normal/webapi/update?id=2&jobTitle=Software Engineer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9897",
+							"path": [
+								"normal",
+								"webapi",
+								"update"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								},
+								{
+									"key": "jobTitle",
+									"value": "Software Engineer"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
