@@ -16,7 +16,7 @@ Scenario Outline: Verify if addition of book is successful
 
 
 @AddBook @Regression
-Scenario Outline: Verify if addition of book is successful
+Scenario Outline: Verify if addition of a book is successful
 
 	Given Add "bookAPI" Payload for "<Name>" "<ISBN>" "<AISLE>" "<Author>"
 	When user calls "addBookAPI" API with "POST" http request

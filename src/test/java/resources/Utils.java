@@ -72,7 +72,7 @@ public RequestSpecification requestSpecifications(String payLoadType) throws IOE
 	return request;		
 	}
 	
-	public static String getGlobalValue(String globalValue) throws IOException {		
+	public static String getGlobalValue(String globalValue) throws IOException {
 		Properties property = new Properties();
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "\\src\\test\\java\\resources\\global.properties");
 		property.load(fis);
